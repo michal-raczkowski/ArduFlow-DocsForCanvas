@@ -1,0 +1,191 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{color}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage{stfloats}
+\usepackage{placeins}
+\usepackage{tabularray}
+\usepackage{xcolor,colortbl}
+\usepackage[top=2.5cm, bottom=2cm, left = 2.5cm, right = 2.5cm]{geometry} 
+\geometry{a4paper} 
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
+\usepackage{graphicx} 
+\usepackage{amsmath,amssymb}  
+\usepackage{bm}  
+\usepackage[pdftex,bookmarks,colorlinks,breaklinks]{hyperref} 
+\hypersetup{linkcolor=MSBlue,citecolor=black,filecolor=black,urlcolor=black} % black links, for printed output
+\usepackage{memhfixc} 
+\usepackage{pdfsync}  
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{tocloft}
+\usepackage{rotating}
+
+\definecolor{MSBlue}{RGB}{47, 84, 150}
+\definecolor{MSGray}{RGB}{128, 128, 128}
+
+\renewcommand{\cftsecfont}{\fontfamily{qag}\selectfont\bfseries} 
+\renewcommand{\cftsecpagefont}{\fontfamily{qag}\selectfont\bfseries\color{MSBlue}} 
+\renewcommand{\cfttoctitlefont}{\fontfamily{qag}\selectfont\LARGE\bfseries}               
+\renewcommand{\familydefault}{phv}
+
+\fancypagestyle{titlepage}{
+  \fancyhf{}
+  \rfoot{\fontfamily{qag}\fontsize{11pt}{0pt}\selectfont\color{MSGray} version 0.3v}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand\footrulewidth{0pt}
+}
+
+
+
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\headheight}{15pt}
+\rhead{\fontfamily{qag}\fontsize{10pt}{12pt}\selectfont\color{MSGray} 08.06.23}
+\lhead[]{}
+\fancyfoot[C]{\fontsize{10pt}{10pt}\selectfont\thepage} 
+
+
+
+\titleformat{\section}
+  {\fontfamily{qag}\selectfont\LARGE\bfseries\color{MSBlue}}
+  {\thesection}{0.5em}{}
+  
+  
+\titleformat{\subsection}
+  {\fontfamily{qag}\selectfont\Large\mdseries\color{MSBlue}}
+  {\thesubsection}{0.5em}{}
+
+\titleformat{\subsubsection}
+  {\fontfamily{qag}\selectfont\large\mdseries\color{MSBlue}}
+  {\thesubsubsection}{0.5em}{}
+
+\titlespacing\subsubsection{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+
+\linespread{1.2} 
+
+\begin{document}
+
+\begin{titlepage}
+  \thispagestyle{titlepage}
+  \begin{center} 
+    \includegraphics[width=150pt]{..//ArduFlowLogo.png}
+    \end{center}
+
+
+	\setlength{\parindent}{0pt}
+	\vspace*{.15\textheight}
+	\medbreak
+	{\fontfamily{qag}\Huge\bfseries\color{MSBlue}Personal Project Idea, Specification and Requirements\par}
+	\bigbreak
+    \bigbreak
+	{Michał Raczkowski\par}
+    \smallbreak
+    {\small OL S6 \par}
+    \smallbreak
+    {\small 4465024\par}
+\end{titlepage}
+
+
+
+\pagebreak
+
+
+\tableofcontents
+
+\vfill
+\begin{table}[b]
+  \centering
+  \begin{tblr}{
+    width = \linewidth,
+    colspec = {Q[200]Q[133]Q[327]Q[248]},
+    hlines,
+    vlines,
+  }
+  \textbf{Version} & \textbf{Date} & \textbf{Author} & \textbf{Comment} \\
+   0.1v                & 23.05.23             & M. Raczkowski   & Logo and overview  \\
+   0.2v                & 24.05.23               & M. Raczkowski & Stakeholders \\
+   0.3v                 & 25.05.23              & M. Raczkowski & Application Specification and Planed functionalities
+
+  \end{tblr}
+\end{table}
+
+
+\pagebreak
+
+
+\section{Overview}
+This project aims to develop a user-friendly desktop application that allows users to create and program custom animations for an LED 8x8 matrix. The application will provide a visual grid editor and drawing tool for animation design. It will also include a timeline interface for sequencing and timing animations. Users can preview their animations in real-time and export the code for Arduino integration. The goal is to simplify the process of creating visually appealing LED matrix animations without extensive coding knowledge.
+
+\section{Stakeholders}
+
+The ArduFlow application, an open-source project for LED 8x8 matrix animation programming with Arduino, involves several stakeholders who contribute to its success and impact:
+
+\subsection{Users}
+    The primary stakeholders are the users of ArduFlow, including Arduino enthusiasts, artists, designers, educators, students, makers, and small-scale businesses. These users leverage ArduFlow's open-source nature to create captivating LED animations for their projects, artwork, installations, or promotional displays.
+    \subsection{Developers}
+
+     The development team behind ArduFlow plays a crucial role in designing, developing, and maintaining the application. However, as an open-source project, the developer community extends beyond the core team. Contributors from the developer community provide valuable feedback, suggest improvements, and actively contribute to the enhancement and customization of the application.
+     \subsection{Arduino Community}
+     The Arduino community is an essential stakeholder in the ArduFlow project. Arduino enthusiasts, developers, and contributors benefit from ArduFlow's open-source nature, enabling them to extend its functionality, integrate it with other Arduino libraries, and share their modifications and additions with the community.
+    \subsection{Hardware Manufacturers}
+    While indirect stakeholders, hardware manufacturers producing Arduino boards and LED matrices benefit from the adoption and usage of ArduFlow. The open-source nature of the application fosters collaboration, potentially leading to innovations and improvements in hardware compatibility.
+    \subsection{Educational Institutions}
+    ArduFlow serves as a valuable educational tool in academic settings. Educational institutions and instructors can utilize the open-source nature of ArduFlow to incorporate it into their curriculum, encouraging students to learn programming, electronics, and digital display concepts while fostering collaboration and knowledge sharing.
+    \subsection{Open Source Community}
+    The open source community itself forms a significant stakeholder group. Contributors from this community provide valuable feedback, actively contribute to the development of ArduFlow, and benefit from the collaborative and knowledge-sharing environment fostered by the open-source project. \par
+\bigbreak
+These stakeholders collectively shape the development, adoption, and impact of ArduFlow as an open-source project. Their involvement, collaboration, and support contribute to the application's usability, functionality, and overall success in enabling users to create stunning LED animations on Arduino-controlled 8x8 matrices while fostering a vibrant and collaborative developer community.
+
+\section{Application Specification}
+
+ArduFlow is a desktop application designed for LED 8x8 matrix animation programming with Arduino. The application provides a user-friendly interface and essential features to facilitate the creation, programming, and export of custom animations. The following are the key specifications of the ArduFlow application:
+
+    \subsection{Compatibility}
+        Operating System: The application is compatible with major operating systems such as Windows, macOS, and Linux.
+        Arduino Boards: ArduFlow supports a wide range of Arduino boards, including popular models like Arduino Uno, Arduino Nano, and Arduino Mega.
+
+    \subsection{User Interface}
+        Visual Grid Editor: ArduFlow offers a visual grid editor, allowing users to design animations by directly manipulating pixels on an 8x8 grid.
+        Animation Playback: The application provides real-time animation playback, allowing users to preview their animations before exporting them to Arduino boards.
+
+    \subsection{Animation Programming}
+        Timing and Sequencing: ArduFlow allows users to set precise timing and sequencing for different frames, creating dynamic animations.
+
+    \subsection{Export and Integration}
+        Arduino Code Generation: ArduFlow generates Arduino code based on the created animations, making it easy for users to integrate the animations into their Arduino projects.
+        JSON File Saving: The application enables users to save their animation sequences as JSON files, providing a convenient way to store and share animation configurations.
+
+        \bigbreak
+
+
+These specifications highlight the essential features and functionalities of ArduFlow, enabling users to create captivating LED animations on Arduino-controlled 8x8 matrices with ease and flexibility. The application supports exporting animations as Arduino code and offers the capability to save animation sequences as JSON files for convenient storage and sharing.
+
+\section{Planed functionalities}
+
+ArduFlow, the desktop application for LED 8x8 matrix animation programming with Arduino, is continuously evolving to meet the needs of its users. The development team has planned several functionalities to enhance the capabilities and user experience of ArduFlow. The following are additional planned functionalities:
+
+\subsection{Animation Preview}
+     Introduce a live preview feature that allows users to see a real-time representation of their LED animations within the ArduFlow application. This would provide immediate feedback and help users fine-tune their animations before exporting them to Arduino boards.
+     \subsection{Animation Timeline Editing}
+
+     Implement a timeline-based editing feature that allows users to visually arrange and manipulate animation frames, layers, and timing. This functionality would provide more precise control over the sequencing and synchronization of elements in complex animations.
+    \subsection{Frame Duplication and Mirroring}
+
+     Allow users to duplicate frames within an animation sequence, making it easier to create repetitive patterns or add variations to existing frames. Additionally, enable mirroring of frames to simplify the creation of symmetrical animations.
+    \subsection{Import/Export Animation Sequences in JSON Format}
+
+     Introduce the ability to import and export animation sequences in JSON format. This would facilitate seamless exchange and sharing of animations between ArduFlow and other applications, enabling interoperability and collaboration.
+    \subsection{Multi-language Support}
+
+    Incorporate multi-language support within the ArduFlow application, allowing users to switch between different languages for a more localized and accessible experience.
+
+\bigbreak
+These additional planned functionalities aim to expand the capabilities of ArduFlow, providing users with more creative tools, customization options, and improved usability. The development team is dedicated to enhancing ArduFlow's functionality based on user feedback and requirements, ensuring it remains a powerful and versatile tool for LED animation programming with Arduino.
+
+\pagebreak
+
+
+\end{document}

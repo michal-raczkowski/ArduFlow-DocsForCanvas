@@ -1,0 +1,12 @@
+\contentsline {section}{\numberline {1}Overview}{2}{section.1}%
+\contentsline {section}{\numberline {2}Research}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Native Desktop Application}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Web-Based Application}{2}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Cross-Platform Framework}{3}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}IDE Extension}{3}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Comparison Table}{3}{section.3}%
+\contentsline {section}{\numberline {4}Conclusion}{4}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Development Complexity}{4}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Code Reusability}{4}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Learning Curve}{4}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Platform Compatibility}{4}{subsection.4.4}%

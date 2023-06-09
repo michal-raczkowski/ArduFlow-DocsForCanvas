@@ -1,0 +1,198 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{color}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage{stfloats}
+\usepackage{placeins}
+\usepackage{tabularray}
+\usepackage{xcolor,colortbl}
+\usepackage[top=2.5cm, bottom=2cm, left = 2.5cm, right = 2.5cm]{geometry} 
+\geometry{a4paper} 
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
+\usepackage{graphicx} 
+\usepackage{amsmath,amssymb}  
+\usepackage{bm}  
+\usepackage[pdftex,bookmarks,colorlinks,breaklinks]{hyperref} 
+\hypersetup{linkcolor=MSBlue,citecolor=black,filecolor=black,urlcolor=black} % black links, for printed output
+\usepackage{memhfixc} 
+\usepackage{pdfsync}  
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{tocloft}
+\usepackage{rotating}
+\usepackage{array}
+\usepackage{adjustbox}
+\usepackage{hhline}
+
+\definecolor{MSBlue}{RGB}{47, 84, 150}
+\definecolor{MSGray}{RGB}{128, 128, 128}
+
+\renewcommand{\cftsecfont}{\fontfamily{qag}\selectfont\bfseries} 
+\renewcommand{\cftsecpagefont}{\fontfamily{qag}\selectfont\bfseries\color{MSBlue}} 
+\renewcommand{\cfttoctitlefont}{\fontfamily{qag}\selectfont\LARGE\bfseries}               
+\renewcommand{\familydefault}{phv}
+
+\fancypagestyle{titlepage}{
+  \fancyhf{}
+  \rfoot{\fontfamily{qag}\fontsize{11pt}{0pt}\selectfont\color{MSGray} version 0.2v}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand\footrulewidth{0pt}
+}
+
+
+
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\headheight}{15pt}
+\rhead{\fontfamily{qag}\fontsize{10pt}{12pt}\selectfont\color{MSGray} 04.06.23}
+\lhead[]{}
+\fancyfoot[C]{\fontsize{10pt}{10pt}\selectfont\thepage} 
+
+
+
+\titleformat{\section}
+  {\fontfamily{qag}\selectfont\LARGE\bfseries\color{MSBlue}}
+  {\thesection}{0.5em}{}
+  
+  
+\titleformat{\subsection}
+  {\fontfamily{qag}\selectfont\Large\mdseries\color{MSBlue}}
+  {\thesubsection}{0.5em}{}
+
+\titleformat{\subsubsection}
+  {\fontfamily{qag}\selectfont\large\mdseries\color{MSBlue}}
+  {\thesubsubsection}{0.5em}{}
+
+\titlespacing\subsubsection{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+
+\linespread{1.2} 
+
+\begin{document}
+
+\begin{titlepage}
+  \thispagestyle{titlepage}
+  \begin{center} 
+    \includegraphics[width=150pt]{..//ArduFlowLogo.png}
+    \end{center}
+
+
+	\setlength{\parindent}{0pt}
+	\vspace*{.15\textheight}
+	\medbreak
+	{\fontfamily{qag}\Huge\bfseries\color{MSBlue}Personal Personal Project Cross-Platform Framework Research\par}
+	\bigbreak
+    \bigbreak
+	{Michał Raczkowski\par}
+    \smallbreak
+    {\small OL S6 \par}
+    \smallbreak
+    {\small 4465024\par}
+\end{titlepage}
+
+
+
+\pagebreak
+
+
+\tableofcontents
+
+\vfill
+\begin{table}[b]
+  \centering
+  \begin{tblr}{
+    width = \linewidth,
+    colspec = {Q[200]Q[133]Q[327]Q[248]},
+    hlines,
+    vlines,
+  }
+  \textbf{Version} & \textbf{Date} & \textbf{Author} & \textbf{Comment} \\
+   0.1v                & 03.06.23             & M. Raczkowski   & Overview, Research, Comparison table  \\
+   0.2v                & 04.06.23               & M. Raczkowski & Conclusion \\
+
+  \end{tblr}
+\end{table}
+
+
+\pagebreak
+
+
+\section{Overview}
+This research conducted a comparison of several frameworks, including Electron.js, Qt, Flutter, and NW.js, for developing the ArduFlow application. The evaluation focused on factors such as GUI customization options, resource utilization, UI rendering, cross-platform capabilities, and available libraries and tools. Electron.js emerged as a framework that allows developers to build cross-platform desktop applications using web technologies, providing extensive GUI customization and direct access to system resources. Qt offers a native look and feel with efficient resource utilization, while Flutter provides fast UI rendering and a single codebase for multiple platforms. NW.js combines web technologies with Node.js and system access. The selection of the most suitable framework depends on specific requirements such as GUI customization needs, performance considerations, development team expertise, and the availability of libraries and tools.
+
+\section{Research}
+This comparison examines various frameworks for developing the ArduFlow application. The evaluation aims to identify the most suitable framework for building the LED 8x8 matrix editor. Factors such as GUI customization, performance, platform compatibility, and available tools will be considered. The objective is to choose the optimal framework that aligns with the specific requirements of the ArduFlow project.
+
+\subsection{Electron.js}
+Electron.js is favored for its familiarity with web technologies, extensive GUI customization options, and direct access to system resources. However, it may have higher memory consumption and larger application size.
+
+\subsection{Qt}
+Qt stands out with its native look and feel, high performance, and efficient resource utilization. It offers extensive GUI customization options using QML. However, it has a steeper learning curve and limited availability of existing libraries.
+
+\subsection{Flutter}
+Flutter provides fast and visually appealing UI rendering, a customizable framework, and a single codebase for multiple platforms. However, it is relatively newer with a smaller community and limited availability of platform-specific libraries.
+
+\subsection{NW.js}
+NW.js combines web technologies with Node.js and offers access to a wide range of Node.js modules and native UI components. However, it may have higher memory consumption and larger application size.
+
+\section{Comparison table}
+
+
+\definecolor{GrayNickel}{rgb}{0.752,0.749,0.737}
+\definecolor{QuillGray}{rgb}{0.87,0.866,0.854}
+\begin{table}[H]
+    \centering
+    \arrayrulecolor{black}
+    \begin{tabular}{|>{\hspace{0pt}}m{0.079\linewidth}|>{\hspace{0pt}}m{0.202\linewidth}|>{\hspace{0pt}}m{0.223\linewidth}|>{\hspace{0pt}}m{0.14\linewidth}|>{\hspace{0pt}}m{0.144\linewidth}|>{\hspace{0pt}}m{0.144\linewidth}|} 
+    \hline
+    \rowcolor[rgb]{0.753,0.749,0.737} Framework     & Pros                                      & Cons                                                & Language              & UI Frameworks Availability & Complexity of Development  \\ 
+    \hline
+    {\cellcolor[rgb]{0.871,0.867,0.855}}Electron.js & Extensive GUI customization options       & Higher memory consumption                           & JavaScript/ \newline Typescript & Web-based frameworks       & Moderate                   \\ 
+    \hhline{|>{\arrayrulecolor[rgb]{0.871,0.867,0.855}}->{\arrayrulecolor{black}}--~~~|}
+    {\cellcolor[rgb]{0.871,0.867,0.855}}            & Cross-platform support                    & Larger application size                             &                       & (e.g., React, Angular)     &                            \\ 
+    \hhline{|>{\arrayrulecolor[rgb]{0.871,0.867,0.855}}->{\arrayrulecolor{black}}--~~~|}
+    {\cellcolor[rgb]{0.871,0.867,0.855}}            & Access to system resources                & Potential performance limitations                   &                       &                            &                            \\ 
+    \hline
+    {\cellcolor[rgb]{0.871,0.867,0.855}}Qt          & Native look and feel                      & Steeper learning curve                              & C++                   & Qt QML                     & High                       \\ 
+    \hhline{|>{\arrayrulecolor[rgb]{0.871,0.867,0.855}}->{\arrayrulecolor{black}}--~~~|}
+    {\cellcolor[rgb]{0.871,0.867,0.855}}            & High performance and resource utilization & Limited availability of libraries                   &                       &                            &                            \\ 
+    \hhline{|>{\arrayrulecolor[rgb]{0.871,0.867,0.855}}->{\arrayrulecolor{black}}--~~~|}
+    {\cellcolor[rgb]{0.871,0.867,0.855}}            & Extensive GUI customization options       &                                                     &                       &                            &                            \\ 
+    \hline
+    {\cellcolor[rgb]{0.871,0.867,0.855}}Flutter     & Fast and visually appealing UI rendering  & Relatively newer with a smaller community           & Dart                  & Flutter                    & Low                        \\ 
+    \hhline{|>{\arrayrulecolor[rgb]{0.871,0.867,0.855}}->{\arrayrulecolor{black}}--~~~|}
+    {\cellcolor[rgb]{0.871,0.867,0.855}}            & Single codebase for multiple platforms    & Limited availability of platform-specific libraries &                       &                            &                            \\ 
+    \hhline{|>{\arrayrulecolor[rgb]{0.871,0.867,0.855}}->{\arrayrulecolor{black}}--~~~|}
+    {\cellcolor[rgb]{0.871,0.867,0.855}}            & Hot reload feature for quick iterations   &                                                     &                       &                            &                            \\ 
+    \hline
+    {\cellcolor[rgb]{0.871,0.867,0.855}}NW.js       & Extensive GUI customization options       & Higher memory consumption                           & JavaScript/ \newline Typescript & (e.g., React, Angular)     & Moderate                   \\ 
+    \hhline{|>{\arrayrulecolor[rgb]{0.871,0.867,0.855}}->{\arrayrulecolor{black}}--~~~|}
+    {\cellcolor[rgb]{0.871,0.867,0.855}}            & Access to Node.js modules and APIs        & Larger application size                             &                       &                            &                            \\
+    \hline
+    \end{tabular}
+    \end{table}
+
+\section{Conclusion}
+Based on the functionalities and features required for the ArduFlow application mention in "Personal Project Idea, Specification and Requirements", the best solution is Electron.js.
+
+\subsection{Extensive GUI Customization}
+Electron.js allows for highly customizable graphical user interfaces (GUIs) using web technologies like HTML, CSS, and JavaScript. This flexibility enables the creation of a tailored and visually appealing interface for the LED 8x8 matrix editor.
+\subsection{Access to System Resources}
+Electron.js provides direct access to system resources, allowing seamless communication with the Arduino board to control the LED matrix. This enables real-time interaction and synchronization between the application and the hardware.
+\subsection{Cross-Platform Support}
+Electron.js offers cross-platform compatibility, allowing the ArduFlow application to run smoothly on multiple operating systems, including Windows, macOS, and Linux. This broadens the reach of the application and ensures usability across different devices.
+
+\subsection{Familiarity with JavaScript/Typescript}
+Electron.js utilizes JavaScript/Typescript, a widely adopted programming language, which is familiar to a large number of developers. This familiarity simplifies the development process and facilitates the utilization of existing JavaScript/Typescript libraries and frameworks.
+
+\subsection{Active Community and Abundant Resources}
+Electron.js benefits from a thriving and active community of developers. This vibrant community provides access to extensive documentation, libraries, and resources, making it easier to find solutions, seek guidance, and address any development challenges encountered during the ArduFlow project.
+
+\subsection{Ecosystem Maturity}
+Electron.js has been widely adopted in the industry and has proven its stability and reliability through the development of numerous successful applications. Its ecosystem is mature, offering a wide range of plugins, libraries, and tools that enhance development efficiency and provide additional functionality.
+
+\pagebreak
+
+
+\end{document}

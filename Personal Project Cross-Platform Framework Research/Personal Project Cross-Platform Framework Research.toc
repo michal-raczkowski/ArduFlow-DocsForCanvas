@@ -1,0 +1,14 @@
+\contentsline {section}{\numberline {1}Overview}{2}{section.1}%
+\contentsline {section}{\numberline {2}Research}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Electron.js}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Qt}{2}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Flutter}{2}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}NW.js}{2}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Comparison table}{3}{section.3}%
+\contentsline {section}{\numberline {4}Conclusion}{3}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Extensive GUI Customization}{3}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Access to System Resources}{4}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Cross-Platform Support}{4}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Familiarity with JavaScript/Typescript}{4}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Active Community and Abundant Resources}{4}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Ecosystem Maturity}{4}{subsection.4.6}%
